@@ -1,0 +1,49 @@
+#!/bin/bash
+
+read -p "Enter the Service: " service
+Logfile="/mnt/c/git/Bash-Scripts/scripts-v1/<file.log>" #path of logfile
+Time=(date '+%Y-%m-%d %H:%M:%S') #Sending the output with TimeStamp
+
+if systemctl is-active  $service; then #Can add --quiet to silence the ouput
+	echo "$service is active on $Time" >> $Logfile
+else
+	echo "$service is Down on $Time" >> $Logfile
+	sudo systemctl start $service
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
